@@ -421,7 +421,7 @@ class Lumiere_lights_prop(bpy.types.PropertyGroup):
 						   name="Energy",
 						   description="Energy of the light",
 						   min=-900000000000.0, max=900000000000.0,
-						   soft_min=0.001, soft_max=500.0,
+						   soft_min=0.001, soft_max=5000.0,
 						   default=10,
 						   step=20000,
 						   precision=2,
@@ -823,15 +823,15 @@ class LIGHTS_UL_list(bpy.types.UIList):
 		object = data
 		row = layout.row(align=True)
 		sub=row.row(align=True)
-		sub.scale_x = 0.65
+		sub.scale_x = 1.0
 		sub.label(text="%d" % (index))
 
 		sub=row.row(align=True)
-		sub.scale_x = 0.25
+		sub.scale_x = 0.45
 		sub.prop(item.Lumiere,"light_color",text='')
 
 		sub=row.row(align=True)
-		sub.scale_x = 1.75
+		sub.scale_x = 1.20
 		sub.prop(item,"name",text='')
 
 		sub=row.row(align=True)
