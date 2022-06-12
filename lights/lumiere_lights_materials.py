@@ -315,7 +315,7 @@ def softbox_mat(light):
 	# Mix Shader Node 1 - COLOR / TEXTURE
 	mix1 = mat.node_tree.nodes.new(type="ShaderNodeMixShader")
 	#Light path reflection
-	mat.node_tree.links.new(reflect_light_path.outputs[5], mix1.inputs[0])
+	mat.node_tree.links.new(reflect_light_path.outputs[0], mix1.inputs[0])
 	mat.node_tree.links.new(color_emit.outputs[0], mix1.inputs[1])
 	mat.node_tree.links.new(texture_emit.outputs[0], mix1.inputs[2])
 	mix1.location = (180, 40)
