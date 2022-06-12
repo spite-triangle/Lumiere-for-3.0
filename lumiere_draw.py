@@ -109,10 +109,10 @@ def draw_callback_2d(self, context):
 
 	# Draw text to indicate that Lumiere is active
 	draw_callback_lumiere(self, context)
+	light = context.active_object
 
-	if self.light:
+	if light:
 		# Create a circle using a tri fan
-		light = self.light
 		color = context.preferences.themes[0].view_3d.object_active
 		circle_hit = location_3d_to_region_2d(region, rv3d, light.Lumiere.hit)
 		circle_radius = (circle_hit[0] + 4, circle_hit[1] + 4)
@@ -143,9 +143,8 @@ def draw_callback_3d(self, context):
 
 	region = context.region
 	rv3d = context.region_data
-
-	if self.light and (context.active_object is not None):
-		light = self.light
+	light = context.active_object
+	if light and (context.active_object is not None):
 		color = context.preferences.themes[0].view_3d.object_active
 		if self.action == "shadow":
 			coords = [list(light.Lumiere.shadow), list(light.location)]

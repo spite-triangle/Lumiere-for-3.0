@@ -36,7 +36,8 @@ from ..lumiere_utils import (
 # -------------------------------------------------------------------- #
 def update_type_light(self, context):
 	"""Change the selected light to a new one"""
-	light = bpy.data.objects[self.id_data.name]
+	# light = bpy.data.objects[self.id_data.name]
+	light = context.active_object
 
 	values = {}
 	lumiere_dict = {}
@@ -831,7 +832,7 @@ class LIGHTS_UL_list(bpy.types.UIList):
 		sub.prop(item.Lumiere,"light_color",text='')
 
 		sub=row.row(align=True)
-		sub.scale_x = 1.20
+		sub.scale_x = 1.2
 		sub.prop(item,"name",text='')
 
 		sub=row.row(align=True)

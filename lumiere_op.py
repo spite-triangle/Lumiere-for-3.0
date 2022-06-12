@@ -222,6 +222,9 @@ class LUMIERE_OT_ray_operator(Operator):
 			context.view_layer.active_layer_collection = context.view_layer.layer_collection
 
 	def modal(self, context, event):
+
+		self.light = context.active_object
+		
 		# Find the limit of the view3d region
 		check_region(self,context,event)
 

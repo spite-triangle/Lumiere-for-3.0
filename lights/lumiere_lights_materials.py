@@ -344,7 +344,8 @@ def update_mat(self, context):
 	"""Update the material nodes of the lights"""
 
 	# Get the light
-	light = bpy.data.objects[self.id_data.name]
+	# light = bpy.data.objects[self.id_data.name]
+	light = context.active_object
 
 	try:
 		# Softbox Light
