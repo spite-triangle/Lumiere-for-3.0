@@ -1,9 +1,10 @@
-# Lumiere V0.4 for 2.82
+# Lumiere V0.4 for 3.0
 
 ## Interactive Lighting add-on for Blender 
 Overview : https://www.youtube.com/watch?v=8MCrqrkT5es&feature=youtu.be
 
 ## Installation :
-- Download the zip file ready to install
-- In the blender preferences, click on the "Add-ons" tab then on "Install..." and select the zip file,
-- A new tab "Lumiere" should appear.
+
+- 下载 release 中的 Lumiere.zip
+- 在 blender 中安装 
+
